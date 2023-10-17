@@ -1,9 +1,14 @@
 import fs from "fs";
+import __dirname from "../utils.js";
 
-class ProductManager {
+
+
+
+
+export default class ProductManager {
   constructor() {
     this.products = [];
-    this.path = "data/products.json";
+    this.path = (`${__dirname}/src/data/products.json`)
   }
 
   addProduct = async (name, description, price, thumbnail, stock, code) => {
@@ -127,50 +132,50 @@ class ProductManager {
   };
 }
 
-const productManager = new ProductManager();
+// const productManager = new ProductManager();
 
- await productManager.addProduct(
-  "producto 1",
-  "descripcion 1",
-  12345,
-  "/public/images",
-  45,
-  "123abc"
-);
+//  await productManager.addProduct(
+//   "producto 1",
+//   "descripcion 1",
+//   12345,
+//   "/public/images",
+//   45,
+//   "123abc"
+// );
 
 
-await productManager.addProduct(
-  "producto 2",
-  "descripcion 2",
-  876,
-  "/public/images",
-  88,
-  "124abc"
-);
-await productManager.addProduct(
-  "producto 3",
-  "descripcion 3",
-  45,
-  "/public/images",
-  12,
-  "125abc"
-);
-await productManager.addProduct(
-  "producto 5",
-  "descripcion 5",
-  12345,
-  "/public/images",
-  45,
-  "123abc"
-);
- const productById = await productManager.getProductsById(2);
- const products = await productManager.getProducts();
- console.log (products)
- console.log(productById)
+// await productManager.addProduct(
+//   "producto 2",
+//   "descripcion 2",
+//   876,
+//   "/public/images",
+//   88,
+//   "124abc"
+// );
+// await productManager.addProduct(
+//   "producto 3",
+//   "descripcion 3",
+//   45,
+//   "/public/images",
+//   12,
+//   "125abc"
+// );
+// await productManager.addProduct(
+//   "producto 5",
+//   "descripcion 5",
+//   12345,
+//   "/public/images",
+//   45,
+//   "123abh"
+// );
+//  const productById = await productManager.getProductsById(2);
+//  const products = await productManager.getProducts();
+//  console.log (products)
+//  console.log(productById)
 
- await productManager.updateProduct( 1 ,{
+//  await productManager.updateProduct( 1 ,{
     
-    description : 'producto actualizado'
- })
+//     description : 'producto actualizado'
+//  })
 
-await productManager.deleteProduct(3)
+// await productManager.deleteProduct(3)
