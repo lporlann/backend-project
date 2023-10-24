@@ -8,7 +8,7 @@ import __dirname from "../utils.js";
 export default class ProductManager {
   constructor() {
     this.products = [];
-    this.path = (`${__dirname}/src/data/products.json`)
+    this.path = (`${__dirname}/data/products.json`)
   }
 
   addProduct = async (name, description, price, thumbnail, stock, code) => {
